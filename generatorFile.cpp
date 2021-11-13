@@ -105,6 +105,7 @@ public:
     // this line of code is saying that the numpersontask class can be passed into ostreams out function
     friend ostream& operator <<(ostream& os, const numPersonTask& npt);
 
+    void createString();
     // formats the fullstring within the function, allows us to easily call it if needed for debug
     string outputString()
     {
@@ -112,67 +113,24 @@ public:
         cout << fullString;
         return fullString;
     }
+
+    
 };
+
+void numPersonTask::createString()
+{
+    srand(time(NULL));
+    nptName = names[rand() % 100 + 1];
+    nptTask = tasks[rand() % 10 + 0];
+    nptNumber = rand() % 10 + 1;
+}
 
 // tells the ostream to allow fullstring to be passed
 ostream& operator <<(ostream& os, const numPersonTask& npt)
 {
     os << npt.fullString;
     return os;
-
 }
-
-// holder vector
-vector<numPersonTask> list;
-// create person(s) function
-vector<numPersonTask> newNPT()
-{
-    numPersonTask npt;
-    npt.nptName = names[generateNumber(100)];
-    npt.nptTask = tasks[generateNumber(10)];
-    npt.nptNumber = generateNumber(15);
-    list.push_back(npt);
-    
-
-    return list;
-}
-
-/*
-keeping this abomination here out of shame after i figured out how i should do this
-string generateContent()
-{
-    string newString;
-    string nameString;
-    string taskString;
-
-    fstream nameLoader("inputs/name.txt");
-    fstream taskLoader("inputs/tasks.txt");
-
-    if(taskLoader.is_open())
-    {
-        if(nameLoader.is_open())
-        {
-            while(getline(nameLoader, nameString))
-            {
-                newString.append(nameString);
-                newString.append(", ");
-            }
-
-            //like honestly what was i thinking, that i could make this work well at all???
-
-            while(getline(taskLoader, taskString))
-            {   
-                newString.append(taskString);
-                newString.append(", ");
-                newString.append(generateImportance());
-                newString.append("\n");
-            }
-            cout << newString << endl;   
-            // is easier atleast now, to seperate these into two different functions, push them into an array, and then randomly choose one via random number generator. And while it may get duplicates im ok with that
-        }
-    }
-}
-*/
 
 
 
@@ -184,9 +142,12 @@ int main()
     cin >> amount;
     taskLoaderFunc();
     nameLoaderFunc();
+    
     for(int i = 0; i < amount; i++)
     {
-        newNPT();
-        cout << list[i] << endl;
+        numPersonTask temp;
+        temp.createString();
+        temp.outputString();
+
     }
 }
