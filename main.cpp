@@ -38,14 +38,10 @@ void getInput(string fileLoc)
 {
     string tempStr;
     // instantiate an ifstream object to use to read the file
-    fstream fileStream(fileLoc);
+    fstream fileStream(fileLoc, ios::in);
     // temp comments until i work out how to write this 
-
-    // checks if string is empty or not, if string is not empty then try to open.
-    if(fileLoc.empty() == false)
-    {  
         // open file
-        fileStream.open(fileLoc);
+        //fileStream.open(fileLoc);
         if(fileStream.is_open())
         {
             cout << "file opened";
@@ -55,14 +51,13 @@ void getInput(string fileLoc)
                 //test to see if we can loop through a string via index
                 for(int i = 0; i < tempStr.length(); i++)
                 {
-                    cout << "file opened";
+                    //cout << "file opened : " << endl;
+                    //it work, now we need to find the tags.
                     cout << tempStr.at(i) << "\n";
                 }
             }
             
         }
-        
-    }
     fileStream.close();
     // call out inv
     // outInv();

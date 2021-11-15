@@ -1,100 +1,100 @@
-7 : Bentley - Server Maintenance
-10 : Bentley - Project Management
-7 : Whitney - Programming
-1 : Pittman - Marketing
-3 : Morales - Project Management
-3 : Paul - Programming
-3 : Howard - Marketing
-8 : Howard - Customer Service
-4 : Riddle - Marketing
-6 : Dominguez - Customer Service
-9 : Duke - Marketing
-9 : Velasquez - Server Maintenance
-3 : Porter - Project Management
-7 : Moses - Server Maintenance
-7 : Diaz - Debugging
-1 : Guerrero - Quality Assurance
-10 : Paul - Programming
-10 : Guerrero - Programming
-2 : Reilly - Project Management
-1 : Kirby - Quality Assurance
-4 : Riddle - Programming
-9 : Benson - Debugging
-5 : Ortega - Customer Service
-7 : Sosa - Artwork
-7 : Mccullough - Marketing
-4 : Guerrero - Project Management
-3 : Brown - Quality Assurance
-6 : Morales - Tech Support
-8 : Reilly - Debugging
-2 : Rollins - Tech Support
-4 : Bentley - Project Management
-10 : Rangel - Marketing
-10 : Riddle - Server Maintenance
-1 : Velasquez - Quality Assurance
-5 : Dominguez - Quality Assurance
-2 : Porter - Server Maintenance
-9 : Campbell - Programming
-9 : Gregory - Debugging
-1 : Sanders - Programming
-10 : Dillon - Quality Assurance
-1 : Bennett - Project Management
-8 : Kirby - Tech Support
-8 : Hanson - Marketing
-9 : Perkins - Marketing
-8 : Hill - Customer Service
-8 : Gross - Customer Service
-10 : Hays - Project Management
-6 : Gross - Customer Service
-2 : Rangel - Tech Support
-3 : Murray - Programming
-2 : Rodgers - Human resources
-9 : Wallace - Quality Assurance
-1 : Ball - Artwork
-10 : Pittman - Marketing
-4 : Tanner - Quality Assurance
-2 : Arnold - Server Maintenance
-2 : Mcgee - Programming
-1 : Guerra - Server Maintenance
-9 : Ball - Project Management
-2 : Barker - Server Maintenance
-9 : Wade - Server Maintenance
-1 : Howard - Project Management
-10 : Chandler - Quality Assurance
-8 : Burgess - Artwork
-1 : Pearson - Server Maintenance
-7 : Tanner - Server Maintenance
-3 : Ortega - Project Management
-7 : Munoz - Server Maintenance
-7 : Frazier - Quality Assurance
-2 : Perkins - Tech Support
-6 : Goodman - Debugging
-6 : Mccullough - Marketing
-9 : Sloan - Human resources
-6 : Diaz - Customer Service
-5 : Nash - Programming
-4 : Wright - Project Management
-6 : Kirby - Tech Support
-2 : Sullivan - Tech Support
-1 : Pittman - Customer Service
-6 : Porter - Server Maintenance
-1 : Wiley - Marketing
-10 : Atkinson - Quality Assurance
-3 : Frazier - Server Maintenance
-10 : Townsend - Programming
-8 : Wiley - Debugging
-3 : Gross - Artwork
-4 : Mitchell - Tech Support
-9 : Barry - Human resources
-8 : Finley - Tech Support
-5 : Guerra - Quality Assurance
-2 : Sharp - Server Maintenance
-3 : Reilly - Customer Service
-4 : Tanner - Tech Support
-6 : Kirby - Human resources
-3 : Dillon - Human resources
-9 : Wallace - Artwork
-6 : Burnett - Marketing
-6 : Fry - Server Maintenance
-6 : Harding - Marketing
-1 : Acevedo - Artwork
+7 : Maldonado - Marketing
+5 : Hays - Marketing
+4 : Frazier - Tech Support
+2 : Hays - Artwork
+8 : Dominguez - Debugging
+7 : Townsend - Debugging
+6 : Morton - Marketing
+10 : Benson - Human resources
+5 : Calderon - Debugging
+2 : Sanders - Marketing
+5 : Arnold - Programming
+9 : Guerrero - Programming
+8 : Paul - Server Maintenance
+2 : Mays - Programming
+5 : Sullivan - Programming
+2 : Hendricks - Server Maintenance
+1 : Chandler - Quality Assurance
+10 : Bond - Human resources
+2 : Calderon - Project Management
+4 : Lee - Customer Service
+8 : Sanders - Human resources
+1 : Cruz - Customer Service
+6 : Cruz - Project Management
+6 : Lawson - Project Management
+6 : Morales - Customer Service
+4 : Wiggins - Project Management
+7 : Montoya - Artwork
+4 : Howard - Debugging
+3 : Butler - Server Maintenance
+8 : Campbell - Quality Assurance
+10 : Hays - Human resources
+8 : Dominguez - Server Maintenance
+1 : Diaz - Server Maintenance
+3 : Wade - Programming
+9 : Tanner - Tech Support
+7 : Murray - Quality Assurance
+10 : Finley - Marketing
+8 : Mcfarland - Quality Assurance
+4 : Mcfarland - Human resources
+5 : Wiley - Artwork
+7 : Hanson - Server Maintenance
+1 : Arnold - Debugging
+8 : Frazier - Server Maintenance
+4 : Arnold - Project Management
+3 : Harding - Marketing
+8 : Calderon - Customer Service
+6 : Guerra - Artwork
+3 : Carney - Quality Assurance
+2 : Mcgee - Project Management
+10 : Blair - Human resources
+4 : Frazier - Tech Support
+2 : Chandler - Human resources
+6 : Tyler - Human resources
+4 : Townsend - Debugging
+9 : Velazquez - Marketing
+10 : Bond - Artwork
+1 : Guerrero - Marketing
+8 : Burnett - Server Maintenance
+4 : Duke - Server Maintenance
+5 : Morton - Quality Assurance
+4 : Townsend - Artwork
+3 : Murray - Tech Support
+4 : Salazar - Project Management
+2 : Parks - Debugging
+9 : Barker - Project Management
+10 : Herrera - Debugging
+9 : Stephens - Tech Support
+3 : Ortega - Customer Service
+6 : Blair - Server Maintenance
+9 : Benson - Tech Support
+5 : Whitney - Debugging
+2 : Rangel - Human resources
+1 : Morton - Marketing
+7 : Wiley - Debugging
+6 : Wright - Human resources
+1 : Reilly - Debugging
+10 : Dillon - Programming
+3 : Tyler - Project Management
+2 : Duke - Tech Support
+3 : Rodgers - Customer Service
+9 : Paul - Marketing
+5 : Gross - Artwork
+8 : Perkins - Programming
+1 : Stephens - Debugging
+3 : Riddle - Artwork
+10 : Kirby - Tech Support
+1 : Parks - Artwork
+1 : Mason - Tech Support
+5 : Ball - Tech Support
+9 : Perkins - Quality Assurance
+10 : Kirby - Artwork
+3 : Finley - Server Maintenance
+9 : Murray - Tech Support
+1 : Mays - Debugging
+2 : Harding - Quality Assurance
+1 : Lee - Programming
+1 : Tanner - Human resources
+6 : Burnett - Programming
+5 : Atkinson - Customer Service
+4 : Davis - Tech Support
