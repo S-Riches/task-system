@@ -18,14 +18,13 @@ using namespace std;
     this program needs to generate procedural tasks based of of pre-determined inputs and save them to a text file.
     the tasks will be delegated to 100 different people, where there is 10 different tasks, for example, whitney - shopping - 1 or similiar
 
-    
     In this program (which was supposed to be a script for the file reader)
     i learnt : basic classes, basic file reading and writing, and how to generate a random number.
-
 */
 
 fstream nameLoader;
 fstream taskLoader;
+fstream taskOut;
 
 string name;
 string task;
@@ -33,7 +32,7 @@ string task;
 vector <string> names;
 vector <string> tasks;
 
-// generate a random number between 1 and 10
+// generate a random number between the given parameter
 int generateNumber(int limit)
 {
     // declare var 
@@ -46,7 +45,7 @@ int generateNumber(int limit)
     return out;
 }
 
-
+// load the names into a list
 vector<string> nameLoaderFunc()
 {
     cout << "\n" << "--Processing Names--" << "\n" << "\n";
@@ -62,12 +61,13 @@ vector<string> nameLoaderFunc()
     nameLoader.close();
 
     for(int i = 0; i < names.size(); i++){
-        //cout << names[i] << endl;
+        cout << names[i] << endl;
     }
+    cout << "----------------------\n" << endl; 
     return names;
-    
 }
 
+// load the tasks from the file
 vector<string> taskLoaderFunc()
 {
     // cool title
@@ -88,7 +88,7 @@ vector<string> taskLoaderFunc()
     taskLoader.close();
     // simple loop to print out every element
     for(int i = 1; i < tasks.size(); i++){
-        //cout << tasks[i] << endl;
+        cout << tasks[i] << endl;
     }
     return tasks;
 }
@@ -97,57 +97,64 @@ vector<string> taskLoaderFunc()
 class numPersonTask
 {
 public:
+    // define vars
     string nptName;
     string nptTask;
     int nptNumber;
     string fullString;
 
-    // this line of code is saying that the numpersontask class can be passed into ostreams out function
-    friend ostream& operator <<(ostream& os, const numPersonTask& npt);
-
     void createString();
     // formats the fullstring within the function, allows us to easily call it if needed for debug
     string outputString()
     {
+        //formats the string
         fullString = to_string(nptNumber) + " : " + nptName + " - " + nptTask + "\n";
+        // print out for debug
         cout << fullString;
         return fullString;
-    }
-
-    
+    }    
 };
 
+// allows us to change the values of a class member from outside the class.
 void numPersonTask::createString()
 {
-    srand(time(NULL));
-    nptName = names[rand() % 100 + 1];
+    nptName = names[rand() % 99 + 1];
     nptTask = tasks[rand() % 10 + 0];
     nptNumber = rand() % 10 + 1;
 }
 
-// tells the ostream to allow fullstring to be passed
-ostream& operator <<(ostream& os, const numPersonTask& npt)
-{
-    os << npt.fullString;
-    return os;
-}
-
-
-
 int main()
 {
+    // seed the random
+    srand(time(NULL));
     int amount;
+    // add some flavour text
     cout << "--Generator file--" << endl;
+    // get input for the for loop
     cout << "how many people need to be generated?" << endl;
     cin >> amount;
+    // load names
     taskLoaderFunc();
     nameLoaderFunc();
     
+    // gets the location for the output file
+    taskOut.open("tasksOut.txt");
     for(int i = 0; i < amount; i++)
     {
         numPersonTask temp;
         temp.createString();
-        temp.outputString();
-
+        // checks if file is open
+        if(taskOut.is_open())
+        {
+            // adds it to the file
+            taskOut << temp.outputString();
+        }
+        else cout << "unable to append file";
     }
+    taskOut.close();
+
+    // stops program from closing after use
+    cout << "\n\n Press any key to close : ";
+    int x;
+    cin >> x;
 }

@@ -1,11 +1,3 @@
-/*
-this is a program that will be able to take input from a txt file
-read the file, which will be unordered
-and order the tasks and output its correct order
-
-need to make a c++ file that will generate an unorded list for demo purpose.
-*/
-
 #include <iostream>
 #include <fstream>
 #include <cctype>
@@ -14,6 +6,14 @@ need to make a c++ file that will generate an unorded list for demo purpose.
 // i know this is bad practice but i really dont care for this program
 using namespace std;
 
+/*
+this is a program that will be able to take input from a txt file
+read the file, which will be unordered
+and order the tasks and output its correct order
+*/
+
+/*
+TODO: WILL NEED TO WRITE A GOOD DATA VALIDATION FUNCTION
 string dataValidation(string input)
 {
     if(input.empty() != true)
@@ -31,26 +31,43 @@ string dataValidation(string input)
     }
 
 }
-
+*/
+  
 //get input from txt file, put into string vector or array, return the value to then be 
 void getInput(string fileLoc)
 {
+    string tempStr;
     // instantiate an ifstream object to use to read the file
-    ifstream fileStream;
+    fstream fileStream(fileLoc);
     // temp comments until i work out how to write this 
 
     // checks if string is empty or not, if string is not empty then try to open.
-    if(fileLoc.empty())
+    if(fileLoc.empty() == false)
     {  
         // open file
         fileStream.open(fileLoc);
-        cout << "file opened!" << endl;
+        if(fileStream.is_open())
+        {
+            cout << "file opened";
+            while (getline(fileStream, tempStr))
+            {
+                cout << "file opened 1";
+                //test to see if we can loop through a string via index
+                for(int i = 0; i < tempStr.length(); i++)
+                {
+                    cout << "file opened";
+                    cout << tempStr.at(i) << "\n";
+                }
+            }
+            
+        }
+        
     }
+    fileStream.close();
     // call out inv
     // outInv();
     // close file
 
-    // check f stream docs.
 
 }
 
@@ -79,8 +96,8 @@ int main()
     // input to get file location
     cout << "Please input file to read : ";
     cin >> fileLoc;
-    dataValidation(fileLoc);
-    //getInput(fileLoc);
+    //dataValidation(fileLoc);
+    getInput(fileLoc);
 
 
     return 0;
