@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cctype>
+#include <vector>
 #include <string>
 
 // i know this is bad practice but i really dont care for this program
@@ -33,53 +34,73 @@ string dataValidation(string input)
 }
 */
   
+//vector to hold the other vectors
+vector<vector<string>> holder;
 //get input from txt file, put into string vector or array, return the value to then be 
 void getInput(string fileLoc)
 {
+    // temp variables for comparison
     string tempStr;
+    string tempNum;
+    // temp vector to add to the holder
+    vector <string> col;
+
     // instantiate an ifstream object to use to read the file
     fstream fileStream(fileLoc, ios::in);
     // temp comments until i work out how to write this 
-        // open file
-        //fileStream.open(fileLoc);
         if(fileStream.is_open())
         {
+            // text to confirm the file was opened succesfully
             cout << "file opened";
             while (getline(fileStream, tempStr))
             {
-                cout << "file opened 1";
-                //test to see if we can loop through a string via index
-                for(int i = 0; i < tempStr.length(); i++)
+                // get the first two characters from tempstr and then store them in a temp string for processing.
+                tempNum = tempStr.substr(0,2);
+                // debug
+                cout << tempNum << endl;
+                // ugly switch statement, as they normally are :(
+                switch (stoi(tempNum))
                 {
-                    //cout << "file opened : " << endl;
-                    //it work, now we need to find the tags.
-                    cout << tempStr.at(i) << "\n";
+                case 1:
+                    /* code */
+                    break;
+                case 2:
+                    /* code */
+                    break;
+                case 3:
+                    /* code */
+                    break;
+                case 4:
+                    /* code */
+                    break;
+                case 5:
+                    /* code */
+                    break;
+                case 6:
+                    /* code */
+                    break;
+                case 7:
+                    /* code */
+                    break;
+                case 8:
+                    /* code */
+                    break;
+                case 9:
+                    /* code */
+                    break;
+                case 10:
+                    /* code */
+                    break;
+                
+                default:
+                    break;
                 }
             }
-            
         }
     fileStream.close();
     // call out inv
-    // outInv();
     // close file
 
-
-}
-
-string outInv()
-{
-    string temp_string;
-    // need to loop through each line
-    for (int i = 0; i < 10; i++)
-    {
-        // temp place holder text
-        /* 
-        the temp string will be used to format and output the text in the correct way
-        we cant use the return keyword as it will break out of the for loop and return a value way
-        too early
-        */
-    }
-    return temp_string;
 }
 
 int main()
