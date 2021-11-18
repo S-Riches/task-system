@@ -11,29 +11,8 @@ using namespace std;
 this is a program that will be able to take input from a txt file
 read the file, which will be unordered
 and order the tasks and output its correct order
-*/
+*/ 
 
-/*
-TODO: WILL NEED TO WRITE A GOOD DATA VALIDATION FUNCTION
-string dataValidation(string input)
-{
-    if(input.empty() != true)
-    {
-        // perhaps check that the input is infact a string and not an int would avoid errors.
-        try
-        {  
-            cout << input << endl;
-            return input;
-        }
-        catch(...)
-        {
-            // ?!??
-        }
-    }
-
-}
-*/
-  
 // appologies in advance for this sacrilege
 vector<string> group1;
 vector<string> group2;
@@ -46,6 +25,7 @@ vector<string> group8;
 vector<string> group9;
 vector<string> group10;
 vector<vector<string>> holder = {group1,group2,group3,group4,group5,group6,group7,group8,group9,group10};
+bool check = false;
 //get input from txt file, put into string vector or array, return the value to then be 
 void getInput(string fileLoc)
 {
@@ -53,19 +33,18 @@ void getInput(string fileLoc)
     string tempStr;
     string tempNum;
 
-    // instantiate an ifstream object to use to read the file
     fstream fileStream(fileLoc, ios::in);
+    // instantiate an ifstream object to use to read the file
     // temp comments until i work out how to write this 
         if(fileStream.is_open())
         {
+            check == true;
             // text to confirm the file was opened succesfully
-            cout << "file opened\n";
+            cout << "file opened\n Assigning groups\n";
             while (getline(fileStream, tempStr))
             {
                 // get the first two characters from tempstr and then store them in a temp string for processing.
                 tempNum = tempStr.substr(0,2);
-                // debug
-                cout << tempNum << endl;
                 // ugly switch statement, as they normally are :(
                 switch (stoi(tempNum))
                 {
@@ -113,7 +92,6 @@ void getInput(string fileLoc)
                 default:
                     cout << "error occured!" << endl;
                     break;
-
                 }
                 cout << tempStr << endl;
             }
@@ -123,15 +101,16 @@ void getInput(string fileLoc)
 
 void outputGroups()
 {
-    for(int i = 0; i < holder.size(); i++)
+    if(check = true)
     {
-        cout << "\n--Group " + to_string(i+1) + "--\n";
-        for(int x = 0; x < holder[i].size(); x++){
-            
-            cout << holder[i][x] << ", ";
-            
+        for(int i = 0; i < holder.size(); i++)
+        {
+            cout << "\n--Group " + to_string(i+1) + "--\n";
+            for(int x = 0; x < holder[i].size(); x++){
+                cout << holder[i][x] << "\n";
+            }
+            cout << "\n";
         }
-
     }
 }
 
@@ -144,7 +123,6 @@ int main()
     // input to get file location
     cout << "Please input file to read : ";
     cin >> fileLoc;
-    //dataValidation(fileLoc);
     getInput(fileLoc);
     cout << "---------------------" << endl;
     outputGroups();
